@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd"
+import { DragDropContext, Droppable, Draggable,DropResult } from "react-beautiful-dnd"
 import type { Task } from "@/lib/types"
 import { TaskCard } from "@/components/task-card"
 import { cn } from "@/lib/utils"
@@ -29,7 +29,7 @@ export function TaskBoard({ tasks, onToggleComplete, onUpdateTask, onDeleteTask 
     setEditingTaskId(null)
   }
 
-  const handleDragEnd = (result: any) => {
+  const handleDragEnd = (result:  DropResult ) => {
     if (!result.destination) return
 
     const { source, destination } = result

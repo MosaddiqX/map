@@ -103,7 +103,7 @@ export function CommandMenu({
             <CommandItem onSelect={handleAddQuickTask}>
               <Plus className="mr-2 h-4 w-4" />
               <span>
-                Add "<strong>{inputValue}</strong>" as task
+                Add &quot;<strong>{inputValue}</strong>&quot; as task
               </span>
             </CommandItem>
             <CommandItem
@@ -115,7 +115,7 @@ export function CommandMenu({
             >
               <Search className="mr-2 h-4 w-4" />
               <span>
-                Search for "<strong>{inputValue}</strong>"
+                Search for &quot;<strong>{inputValue}</strong>&quot;
               </span>
             </CommandItem>
           </CommandGroup>
@@ -186,7 +186,7 @@ export function CommandMenu({
             }}
           >
             <Clock className="mr-2 h-4 w-4" />
-            <span>Today's Tasks</span>
+            <span>Today&apos;s Tasks</span>
           </CommandItem>
           <CommandItem
             onSelect={() => {
@@ -304,4 +304,3 @@ export function CommandMenu({
     </CommandDialog>
   )
 }
-
